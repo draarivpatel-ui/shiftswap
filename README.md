@@ -39,7 +39,7 @@ Requires Node 22 or newer.
 node --test tests/*.test.mjs
 ```
 
-Current suite result is 34 test cases with 140 deterministic assertion statements. Coverage includes pass, fail and boundary cases for each constraint, trade validation, malformed input, schedule diff application, republishing, print payload generation and new-shift publication.
+Current suite result is 35 test cases with 143 deterministic assertion statements. Coverage includes pass, fail and boundary cases for each constraint, trade validation, malformed input, schedule diff application, republishing, print payload generation and new-shift publication.
 
 ## Screenshots and video
 

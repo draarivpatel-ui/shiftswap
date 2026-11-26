@@ -32,7 +32,7 @@ The app is dependency-free HTML, CSS and JavaScript modules. `js/core.js` holds 
 
 The validation engine treats a proposed trade as a temporary schedule diff. It unassigns both original shifts, assigns the incoming shifts, evaluates the resulting week for both workers and reports every named rule with a pass or fail result. Nothing is republished unless all four hard rules pass.
 
-The test suite uses Node's built-in runner. It has 34 deterministic test cases with 140 assertion statements. The tests cover pass, fail and boundary cases for every rule, malformed trades, malformed board data, assignment diffs, non-mutating trade simulation, republishing, print output and validation of newly published shifts.
+The test suite uses Node's built-in runner. It has 35 deterministic test cases with 143 assertion statements. The tests cover pass, fail and boundary cases for every rule, malformed trades, malformed board data, assignment diffs, non-mutating trade simulation, republishing, print output and validation of newly published shifts.
 
 The demo assets were produced locally. Three screenshots were captured at 1440 by 900 in headless Chrome. The narration was synthesized locally, and the mp4 was recorded from the real running app at 30 frames per second.
 
@@ -51,7 +51,7 @@ Printing was a separate product surface rather than a stylesheet afterthought. T
 - Implemented exact failure explanations for both sides of a proposed trade.
 - Added manager-side publication of new shifts with the same rule validation.
 - Added deterministic republishing and a clean printable weekly board.
-- Built a 34-case Node test suite with 140 deterministic assertion statements.
+- Built a 35-case Node test suite with 143 deterministic assertion statements.
 - Captured real browser screenshots and produced a narrated local demo video.
 
 ## What we learned

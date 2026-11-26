@@ -89,6 +89,17 @@ test('rest gap border exactly at the threshold passes, including after an overni
   assert.equal(result.measuredMinutes, 10 * 60);
 });
 
+test('rest gap one minute below the threshold fails at exactly 599 minutes', () => {
+  const board = fixtureBoard([
+    shift('mon-close', '2026-12-07', '14:00', '22:00', 'counter', ['ada']),
+    shift('tue-open', '2026-12-08', '07:59', '15:59', 'counter', ['ada'])
+  ]);
+  const result = workerRule(board, 'ada', 'rest-gap');
+  assert.equal(result.passed, false);
+  assert.equal(result.measuredMinutes, 599);
+  assert.match(result.message, /requires 10 hours/);
+});
+
 test('weekly hours passes below the ceiling', () => {
   const board = fixtureBoard([
     shift('d1', '2026-12-07', '06:00', '14:00', 'counter', ['ada']),
