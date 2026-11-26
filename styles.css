@@ -782,6 +782,14 @@ select:disabled {
   }
 }
 
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 @media print {
   @page {
     margin: 0.45in;
