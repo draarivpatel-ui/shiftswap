@@ -1,0 +1,122 @@
+{
+ "sr": 24000,
+ "total": 68.6,
+ "lead": 0.6,
+ "gap_sent": 0.3,
+ "gap_para": 0.75,
+ "tail": 1.0,
+ "seed": 1,
+ "overall_rms": 0.10373707860708237,
+ "overall_peak": 0.9399999976158142,
+ "words": 137,
+ "sentences": [
+  {
+   "para": 0,
+   "sent": 0,
+   "text": "ShiftSwap is a printable swap board for small retail and food teams that still use paper.",
+   "dur": 6.2,
+   "words": 16,
+   "rms": 0.11149265024403433,
+   "start": 0.6
+  },
+  {
+   "para": 1,
+   "sent": 0,
+   "text": "The week is local.",
+   "dur": 1.84,
+   "words": 4,
+   "rms": 0.07691149333561105,
+   "start": 7.55
+  },
+  {
+   "para": 1,
+   "sent": 1,
+   "text": "Every shift shows time, role, coverage and workers.",
+   "dur": 3.56,
+   "words": 8,
+   "rms": 0.1050714047065892,
+   "start": 9.69
+  },
+  {
+   "para": 2,
+   "sent": 0,
+   "text": "Noor offers her Monday morning shift and proposes Jamie's Wednesday opening.",
+   "dur": 5.44,
+   "words": 11,
+   "rms": 0.12159521086880713,
+   "start": 14.0
+  },
+  {
+   "para": 2,
+   "sent": 1,
+   "text": "The checker refuses it because her Tuesday close leaves only eight hours of rest.",
+   "dur": 5.68,
+   "words": 14,
+   "rms": 0.1160346609230787,
+   "start": 19.74
+  },
+  {
+   "para": 3,
+   "sent": 0,
+   "text": "The policy panel names the exact rule and threshold.",
+   "dur": 3.64,
+   "words": 9,
+   "rms": 0.1152773085109758,
+   "start": 26.17
+  },
+  {
+   "para": 3,
+   "sent": 1,
+   "text": "In this case, rest gap R1 requires ten hours, so the failure is inspectable.",
+   "dur": 5.4,
+   "words": 14,
+   "rms": 0.13099557361447164,
+   "start": 30.11
+  },
+  {
+   "para": 4,
+   "sent": 0,
+   "text": "Maya then offers Wednesday close and trades with Alex on Thursday opening.",
+   "dur": 5.24,
+   "words": 12,
+   "rms": 0.11915776551110745,
+   "start": 36.26
+  },
+  {
+   "para": 4,
+   "sent": 1,
+   "text": "The rest gap, weekly hours, role match and double booking rules all pass.",
+   "dur": 5.04,
+   "words": 13,
+   "rms": 0.14456456957775848,
+   "start": 41.8
+  },
+  {
+   "para": 5,
+   "sent": 0,
+   "text": "The accept button republishes revision two, with both assignments changed and the printable payload refreshed.",
+   "dur": 7.96,
+   "words": 15,
+   "rms": 0.10785429186706462,
+   "start": 47.59
+  },
+  {
+   "para": 6,
+   "sent": 0,
+   "text": "ShiftSwap stays offline and honest.",
+   "dur": 2.52,
+   "words": 5,
+   "rms": 0.10990586225665935,
+   "start": 56.3
+  },
+  {
+   "para": 6,
+   "sent": 1,
+   "text": "It prints the week, explains constraints, and deliberately leaves payroll, exports and accounts outside the prototype.",
+   "dur": 8.48,
+   "words": 16,
+   "rms": 0.1125997811610488,
+   "start": 59.12
+  }
+ ]
+}

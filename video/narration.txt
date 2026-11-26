@@ -1,0 +1,13 @@
+ShiftSwap is a printable swap board for small retail and food teams that still use paper.
+
+The week is local. Every shift shows time, role, coverage and workers.
+
+Noor offers her Monday morning shift and proposes Jamie's Wednesday opening. The checker refuses it because her Tuesday close leaves only eight hours of rest.
+
+The policy panel names the exact rule and threshold. In this case, rest gap R1 requires ten hours, so the failure is inspectable.
+
+Maya then offers Wednesday close and trades with Alex on Thursday opening. The rest gap, weekly hours, role match and double booking rules all pass.
+
+The accept button republishes revision two, with both assignments changed and the printable payload refreshed.
+
+ShiftSwap stays offline and honest. It prints the week, explains constraints, and deliberately leaves payroll, exports and accounts outside the prototype.

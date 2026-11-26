@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ShiftSwap is an offline printable shift-swap board with inspectable scheduling rules.">
+  <title>ShiftSwap</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell" id="app-shell">
+    <header class="topbar">
+      <h1>ShiftSwap</h1>
+      <div class="top-actions" aria-label="Board actions">
+        <span class="save-state" id="save-state">Local board ready</span>
+        <button class="button ghost" type="button" id="reset-board">Reset sample</button>
+        <button class="button primary" type="button" id="print-board">Print board</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="board-panel" aria-labelledby="week-title">
+        <div class="panel-heading">
+          <div>
+            <h2 id="week-title">Week board</h2>
+            <p class="panel-note" id="week-range"></p>
+          </div>
+          <div class="revision-box" aria-label="Current board revision">
+            <span>Revision</span>
+            <strong id="revision-number"></strong>
+          </div>
+        </div>
+        <div class="board-stats" id="board-stats" aria-label="Board coverage summary"></div>
+        <div class="week-board" id="week-board"></div>
+
+        <details class="publish-panel" id="publish-panel">
+          <summary>Publish a shift</summary>
+          <form id="publish-form" novalidate>
+            <div class="publish-grid">
+              <label>
+                <span>Day</span>
+                <select id="new-date" required></select>
+              </label>
+              <label>
+                <span>Start</span>
+                <input id="new-start" type="time" value="09:00" required>
+              </label>
+              <label>
+                <span>End</span>
+                <input id="new-end" type="time" value="17:00" required>
+              </label>
+              <label>
+                <span>Role</span>
+                <input id="new-role" list="role-options" value="counter" required>
+                <datalist id="role-options">
+                  <option value="counter"></option>
+                  <option value="kitchen"></option>
+                  <option value="prep"></option>
+                  <option value="barista"></option>
+                  <option value="shift-lead"></option>
+                </datalist>
+              </label>
+              <label>
+                <span>Headcount</span>
+                <input id="new-headcount" type="number" min="1" max="12" value="1" required>
+              </label>
+            </div>
+            <fieldset class="assign-field">
+              <legend>Initial assignees</legend>
+              <div class="assignees" id="new-assignees"></div>
+            </fieldset>
+            <div class="form-actions">
+              <button class="button primary" type="submit">Validate and publish</button>
+              <p class="form-note">New assignments are checked against the same four rules before they join the board.</p>
+            </div>
+            <div class="form-errors" id="publish-errors" aria-live="polite"></div>
+          </form>
+        </details>
+      </section>
+
+      <aside class="side-rail">
+        <section class="swap-desk" aria-labelledby="swap-title">
+          <h2 id="swap-title">Swap desk</h2>
+          <div class="trade-form">
+            <label>
+              <span>Offered shift</span>
+              <select id="source-shift"></select>
+            </label>
+            <label>
+              <span>Worker giving it</span>
+              <select id="source-worker"></select>
+            </label>
+            <label>
+              <span>Trading with</span>
+              <select id="counter-worker"></select>
+            </label>
+            <label>
+              <span>Shift coming back</span>
+              <select id="counter-shift"></select>
+            </label>
+          </div>
+          <div class="trade-actions">
+            <button class="button primary" type="button" id="check-trade">Check trade</button>
+            <button class="button success" type="button" id="accept-trade" disabled>Accept and republish</button>
+          </div>
+          <div class="example-row" aria-label="Sample trades">
+            <button class="text-button" type="button" data-example="fail">Load rest-gap example</button>
+            <button class="text-button" type="button" data-example="pass">Load passing example</button>
+          </div>
+          <div class="validation-results" id="validation-results" aria-live="polite"></div>
+        </section>
+
+        <section class="policy-panel" aria-labelledby="policy-title">
+          <h2 id="policy-title">Policy panel</h2>
+          <div class="policy-list" id="policy-list"></div>
+        </section>
+
+        <section class="print-panel" aria-labelledby="print-title">
+          <h2 id="print-title">Print payload</h2>
+          <pre id="print-payload" tabindex="0"></pre>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <section class="print-sheet" id="print-sheet" aria-hidden="true"></section>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
