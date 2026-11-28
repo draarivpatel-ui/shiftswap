@@ -36,7 +36,7 @@ Then open the printed local URL. Any static file server can serve the same direc
 Requires Node 22 or newer.
 
 ```sh
-node --test tests/*.test.mjs
+npm test
 ```
 
 Current suite result is 40 test cases with 150 deterministic assertion statements. Coverage includes pass, fail and boundary cases for each constraint, trade validation, malformed input, schedule diff application, republishing, print payload generation and new-shift publication.
